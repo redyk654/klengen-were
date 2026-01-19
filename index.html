@@ -26,6 +26,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
@@ -92,63 +93,193 @@
 
     <!-- ========== CONTENU PRINCIPAL ========== -->
     <main class="main" id="contenu-principal" role="main">
-        <!-- Le contenu des pages sera ajouté ici dans la Phase 2 -->
 
-        <!-- Section temporaire pour tester le layout -->
-        <section class="section">
-            <div class="conteneur texte-centre">
-                <h1>Bienvenue chez KLENGEN-WERE</h1>
-                <p>Votre partenaire de confiance en import-export et transit.</p>
-                <p class="mb-lg">Le contenu complet sera ajouté dans la Phase 2.</p>
+        <!-- ========== HERO BANNER ========== -->
+        <section class="hero" aria-label="Bannière principale">
+            <!-- Vidéo d'arrière-plan -->
+            <div class="hero__video-conteneur">
+                <video class="hero__video" autoplay muted loop playsinline poster="assets/images/hero-poster.jpg">
+                    <source src="assets/videos/hero-video.mp4" type="video/mp4">
+                </video>
+                <div class="hero__overlay"></div>
+            </div>
 
-                <!-- Test des boutons -->
-                <div class="flex flex--centre" style="gap: var(--espace-md); flex-wrap: wrap;">
-                    <a href="#" class="btn btn--primaire btn--inline">
-                        <svg class="btn__icone" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                        </svg>
-                        <span data-i18n="btn.contact_whatsapp">Contactez-nous sur WhatsApp</span>
-                    </a>
-                    <a href="services.html" class="btn btn--secondaire btn--inline" data-i18n="btn.voir_services">Voir nos services</a>
-                </div>
+            <!-- Contenu du hero -->
+            <div class="hero__contenu conteneur">
+                <h1 class="hero__titre" data-i18n="hero.titre">
+                    KLENGEN-WERE : Votre partenaire de confiance en import-export
+                </h1>
+                <p class="hero__sous-titre" data-i18n="hero.sous_titre">
+                    Facilitez vos échanges commerciaux entre le Cameroun et le Tchad avec un expert du transit et des matières premières.
+                </p>
+                <a href="https://wa.me/237XXXXXXXXX?text=Bonjour%20KLENGEN-WERE,%20je%20souhaite%20avoir%20des%20informations%20sur%20vos%20services."
+                   class="btn btn--primaire btn--grand"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <svg class="btn__icone" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                    <span data-i18n="btn.contact_whatsapp">Contactez-nous sur WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Indicateur de scroll -->
+            <div class="hero__scroll" aria-hidden="true">
+                <span class="hero__scroll-texte">Scroll</span>
+                <div class="hero__scroll-ligne"></div>
             </div>
         </section>
 
-        <!-- Test section grise -->
-        <section class="section section--gris">
+        <!-- ========== SECTION À PROPOS ========== -->
+        <section class="section apropos" id="apropos">
             <div class="conteneur">
-                <h2 class="texte-centre mb-lg">Test des cartes</h2>
+                <div class="apropos__grille">
+                    <!-- Texte -->
+                    <div class="apropos__contenu">
+                        <h2 class="apropos__titre" data-i18n="apropos.titre">Qui sommes-nous ?</h2>
+                        <p data-i18n="apropos.texte_1">
+                            KLENGEN-WERE est une entreprise camerounaise dynamique, spécialisée dans l'import-export et le transit de marchandises depuis plus de 2 ans. Basée à Douala, au cœur de l'activité portuaire du Cameroun, nous opérons principalement sur l'axe stratégique Cameroun-Tchad.
+                        </p>
+                        <p data-i18n="apropos.texte_2">
+                            Notre expertise couvre l'importation et l'exportation de matières premières essentielles : café, arachides, maïs et blé. Nous accompagnons nos clients à chaque étape de leurs opérations commerciales, de la négociation jusqu'à la livraison finale, en garantissant fiabilité, transparence et respect des délais.
+                        </p>
+                        <a href="services.html" class="btn btn--secondaire" data-i18n="btn.voir_services">Voir nos services</a>
+                    </div>
+                    <!-- Image -->
+                    <div class="apropos__image">
+                        <img src="assets/images/apropos-conteneurs.jpg"
+                             alt="Conteneurs au port de Douala"
+                             loading="lazy"
+                             width="600"
+                             height="400">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SECTION VISION & OBJECTIFS ========== -->
+        <section class="section section--gris vision" id="vision">
+            <div class="conteneur">
+                <h2 class="texte-centre mb-xl" data-i18n="vision.titre">Notre vision</h2>
                 <div class="grille grille--3">
-                    <article class="carte">
-                        <div class="carte__contenu">
-                            <h3 class="carte__titre">Service 1</h3>
-                            <p class="carte__texte">Description du service d'importation de matières premières.</p>
+                    <!-- Vision -->
+                    <article class="carte carte--icone">
+                        <div class="carte__icone">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                            </svg>
                         </div>
+                        <h3 class="carte__titre" data-i18n="vision.vision_titre">Vision</h3>
+                        <p class="carte__texte" data-i18n="vision.vision_texte">
+                            Devenir le partenaire de référence pour le commerce de matières premières entre l'Afrique centrale et ses marchés régionaux, en bâtissant des ponts commerciaux durables.
+                        </p>
                     </article>
-                    <article class="carte">
-                        <div class="carte__contenu">
-                            <h3 class="carte__titre">Service 2</h3>
-                            <p class="carte__texte">Description du service d'exportation vers le Tchad.</p>
+
+                    <!-- Objectifs -->
+                    <article class="carte carte--icone">
+                        <div class="carte__icone">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                            </svg>
                         </div>
+                        <h3 class="carte__titre" data-i18n="vision.objectifs_titre">Objectifs</h3>
+                        <p class="carte__texte" data-i18n="vision.objectifs_texte">
+                            Élargir notre réseau logistique, renforcer nos partenariats commerciaux et garantir des délais de livraison optimaux pour satisfaire pleinement nos clients.
+                        </p>
                     </article>
-                    <article class="carte">
-                        <div class="carte__contenu">
-                            <h3 class="carte__titre">Service 3</h3>
-                            <p class="carte__texte">Description du service de transit et dédouanement.</p>
+
+                    <!-- Engagement qualité -->
+                    <article class="carte carte--icone">
+                        <div class="carte__icone">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+                            </svg>
                         </div>
+                        <h3 class="carte__titre" data-i18n="vision.engagement_titre">Engagement qualité</h3>
+                        <p class="carte__texte" data-i18n="vision.engagement_texte">
+                            Assurer la traçabilité, la conformité et la qualité de chaque marchandise que nous traitons, en respectant les normes internationales les plus strictes.
+                        </p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- Test section bleue CTA -->
-        <section class="section section--bleu">
+        <!-- ========== SECTION AVANTAGES ========== -->
+        <section class="section avantages" id="avantages">
+            <div class="conteneur">
+                <h2 class="texte-centre mb-xl" data-i18n="avantages.titre">Pourquoi choisir KLENGEN-WERE ?</h2>
+                <div class="grille grille--4">
+                    <!-- Expertise -->
+                    <article class="carte carte--icone">
+                        <div class="carte__icone">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <h3 class="carte__titre" data-i18n="avantage.expertise_titre">Expertise locale et internationale</h3>
+                        <p class="carte__texte" data-i18n="avantage.expertise_texte">
+                            Une connaissance approfondie des marchés camerounais et tchadien, combinée à une expertise des procédures douanières.
+                        </p>
+                    </article>
+
+                    <!-- Rapidité -->
+                    <article class="carte carte--icone">
+                        <div class="carte__icone">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+                            </svg>
+                        </div>
+                        <h3 class="carte__titre" data-i18n="avantage.rapidite_titre">Rapidité et efficacité</h3>
+                        <p class="carte__texte" data-i18n="avantage.rapidite_texte">
+                            Des processus optimisés pour des livraisons dans les meilleurs délais, avec un suivi rigoureux de chaque opération.
+                        </p>
+                    </article>
+
+                    <!-- Accompagnement -->
+                    <article class="carte carte--icone">
+                        <div class="carte__icone">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                            </svg>
+                        </div>
+                        <h3 class="carte__titre" data-i18n="avantage.accompagnement_titre">Accompagnement personnalisé</h3>
+                        <p class="carte__texte" data-i18n="avantage.accompagnement_texte">
+                            Un interlocuteur dédié pour chaque client et chaque projet, disponible pour répondre à toutes vos questions.
+                        </p>
+                    </article>
+
+                    <!-- Réseau -->
+                    <article class="carte carte--icone">
+                        <div class="carte__icone">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                            </svg>
+                        </div>
+                        <h3 class="carte__titre" data-i18n="avantage.reseau_titre">Réseau fiable</h3>
+                        <p class="carte__texte" data-i18n="avantage.reseau_texte">
+                            Des partenaires de confiance sur l'ensemble de la chaîne logistique Cameroun-Tchad, pour des opérations sécurisées.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SECTION CTA FINAL ========== -->
+        <section class="section section--bleu cta-final">
             <div class="conteneur texte-centre">
                 <h2 class="mb-md" data-i18n="cta.titre">Prêt à exporter ou importer ?</h2>
-                <p class="mb-lg" data-i18n="cta.sous_titre">Contactez-nous dès aujourd'hui pour discuter de votre projet.</p>
-                <a href="contact.html" class="btn btn--blanc btn--inline" data-i18n="btn.demarrer_projet">Démarrez votre projet</a>
+                <p class="cta-final__texte mb-lg" data-i18n="cta.sous_titre">
+                    Contactez-nous dès aujourd'hui pour discuter de votre projet et découvrir comment nous pouvons vous accompagner.
+                </p>
+                <a href="https://wa.me/237XXXXXXXXX?text=Bonjour%20KLENGEN-WERE,%20je%20souhaite%20d%C3%A9marrer%20un%20projet%20d'import-export."
+                   class="btn btn--blanc btn--grand"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <span data-i18n="btn.demarrer_projet">Démarrez votre projet</span>
+                </a>
             </div>
         </section>
+
     </main>
 
     <!-- ========== FOOTER ========== -->
