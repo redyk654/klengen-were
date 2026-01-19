@@ -1,0 +1,809 @@
+/* ==========================================================================
+   KLENGEN-WERE - Styles principaux
+   Site web vitrine - Import-Export & Transit
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIABLES CSS - Design Système
+   -------------------------------------------------------------------------- */
+:root {
+    /* Couleurs principales */
+    --couleur-primaire: #1B4F72;        /* Bleu marin - titres, header */
+    --couleur-secondaire: #2874A6;      /* Bleu secondaire - dégradés, survol */
+    --couleur-accent: #E67E22;          /* Orange - CTA, accents */
+    --couleur-accent-hover: #D35400;    /* Orange foncé - survol CTA */
+
+    /* Couleurs neutres */
+    --couleur-blanc: #FFFFFF;
+    --couleur-gris-clair: #F8F9FA;      /* Sections alternées */
+    --couleur-gris-moyen: #BDC3C7;      /* Bordures, séparateurs */
+    --couleur-gris-fonce: #2C3E50;      /* Texte principal, footer */
+    --couleur-noir: #1A1A1A;
+
+    /* Overlay */
+    --overlay-sombre: rgba(27, 79, 114, 0.5);
+
+    /* Typographie */
+    --police-principale: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    /* Tailles de police */
+    --taille-h1: clamp(2.5rem, 5vw, 3.5rem);      /* 40-56px */
+    --taille-h2: clamp(2rem, 4vw, 2.625rem);      /* 32-42px */
+    --taille-h3: clamp(1.5rem, 3vw, 1.75rem);     /* 24-28px */
+    --taille-corps: clamp(1rem, 2vw, 1.125rem);   /* 16-18px */
+    --taille-petit: 0.875rem;                      /* 14px */
+    --taille-bouton: 1rem;                         /* 16px */
+
+    /* Hauteur de ligne */
+    --ligne-titre: 1.2;
+    --ligne-corps: 1.7;
+
+    /* Espacements (multiples de 8px) */
+    --espace-xs: 0.5rem;    /* 8px */
+    --espace-sm: 1rem;      /* 16px */
+    --espace-md: 1.5rem;    /* 24px */
+    --espace-lg: 2rem;      /* 32px */
+    --espace-xl: 3rem;      /* 48px */
+    --espace-xxl: 4rem;     /* 64px */
+    --espace-section: 5rem; /* 80px */
+
+    /* Bordures et arrondis */
+    --rayon-petit: 4px;
+    --rayon-moyen: 8px;
+    --rayon-grand: 12px;
+    --rayon-rond: 50%;
+
+    /* Ombres */
+    --ombre-legere: 0 2px 4px rgba(0, 0, 0, 0.08);
+    --ombre-moyenne: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --ombre-forte: 0 8px 24px rgba(0, 0, 0, 0.15);
+    --ombre-header: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    /* Transitions */
+    --transition-rapide: 0.2s ease;
+    --transition-normale: 0.3s ease;
+    --transition-lente: 0.5s ease;
+
+    /* Largeurs maximales */
+    --largeur-max: 1200px;
+    --largeur-contenu: 1000px;
+
+    /* Header */
+    --hauteur-header: 80px;
+    --hauteur-header-mobile: 70px;
+}
+
+/* --------------------------------------------------------------------------
+   2. RESET ET BASE
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%; /* 16px base */
+}
+
+body {
+    font-family: var(--police-principale);
+    font-size: var(--taille-corps);
+    line-height: var(--ligne-corps);
+    color: var(--couleur-gris-fonce);
+    background-color: var(--couleur-blanc);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Support RTL pour l'arabe */
+html[dir="rtl"] body {
+    text-align: right;
+}
+
+/* --------------------------------------------------------------------------
+   3. TYPOGRAPHIE
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: var(--ligne-titre);
+    color: var(--couleur-primaire);
+    margin-bottom: var(--espace-sm);
+}
+
+h1 {
+    font-size: var(--taille-h1);
+    font-weight: 700;
+}
+
+h2 {
+    font-size: var(--taille-h2);
+}
+
+h3 {
+    font-size: var(--taille-h3);
+}
+
+p {
+    margin-bottom: var(--espace-sm);
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+a {
+    color: var(--couleur-primaire);
+    text-decoration: none;
+    transition: color var(--transition-rapide);
+}
+
+a:hover,
+a:focus {
+    color: var(--couleur-accent);
+}
+
+/* Focus visible pour accessibilité */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--couleur-accent);
+    outline-offset: 2px;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --------------------------------------------------------------------------
+   4. LAYOUT - Conteneurs
+   -------------------------------------------------------------------------- */
+.conteneur {
+    width: 100%;
+    max-width: var(--largeur-max);
+    margin: 0 auto;
+    padding: 0 var(--espace-md);
+}
+
+.conteneur--etroit {
+    max-width: var(--largeur-contenu);
+}
+
+.section {
+    padding: var(--espace-section) 0;
+}
+
+.section--gris {
+    background-color: var(--couleur-gris-clair);
+}
+
+.section--bleu {
+    background: linear-gradient(135deg, var(--couleur-primaire) 0%, var(--couleur-secondaire) 100%);
+    color: var(--couleur-blanc);
+}
+
+.section--bleu h2,
+.section--bleu h3 {
+    color: var(--couleur-blanc);
+}
+
+/* --------------------------------------------------------------------------
+   5. HEADER - Navigation
+   -------------------------------------------------------------------------- */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: var(--couleur-blanc);
+    height: var(--hauteur-header);
+    transition: box-shadow var(--transition-normale);
+}
+
+.header--scrolled {
+    box-shadow: var(--ombre-header);
+}
+
+.header__conteneur {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: var(--largeur-max);
+    margin: 0 auto;
+    padding: 0 var(--espace-md);
+}
+
+/* Logo */
+.header__logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.header__logo img {
+    height: 50px;
+    width: auto;
+}
+
+.header__logo-texte {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--couleur-primaire);
+    letter-spacing: -0.5px;
+}
+
+/* Navigation principale */
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav__liste {
+    display: flex;
+    align-items: center;
+    gap: var(--espace-lg);
+}
+
+.nav__lien {
+    font-size: var(--taille-corps);
+    font-weight: 500;
+    color: var(--couleur-gris-fonce);
+    padding: var(--espace-xs) 0;
+    position: relative;
+    transition: color var(--transition-rapide);
+}
+
+.nav__lien::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--couleur-accent);
+    transition: width var(--transition-normale);
+}
+
+.nav__lien:hover,
+.nav__lien:focus,
+.nav__lien--actif {
+    color: var(--couleur-primaire);
+}
+
+.nav__lien:hover::after,
+.nav__lien:focus::after,
+.nav__lien--actif::after {
+    width: 100%;
+}
+
+/* Sélecteur de langue */
+.langue {
+    display: flex;
+    align-items: center;
+    gap: var(--espace-xs);
+    margin-left: var(--espace-lg);
+}
+
+.langue__btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 10px;
+    background: transparent;
+    border: 1px solid var(--couleur-gris-moyen);
+    border-radius: var(--rayon-petit);
+    font-size: var(--taille-petit);
+    font-weight: 500;
+    color: var(--couleur-gris-fonce);
+    cursor: pointer;
+    transition: all var(--transition-rapide);
+}
+
+.langue__btn:hover,
+.langue__btn--actif {
+    background-color: var(--couleur-primaire);
+    border-color: var(--couleur-primaire);
+    color: var(--couleur-blanc);
+}
+
+.langue__drapeau {
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+/* Menu hamburger (mobile) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle__barre {
+    width: 24px;
+    height: 2px;
+    background-color: var(--couleur-gris-fonce);
+    border-radius: 2px;
+    transition: all var(--transition-rapide);
+}
+
+.menu-toggle[aria-expanded="true"] .menu-toggle__barre:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle[aria-expanded="true"] .menu-toggle__barre:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] .menu-toggle__barre:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* --------------------------------------------------------------------------
+   6. FOOTER
+   -------------------------------------------------------------------------- */
+.footer {
+    background-color: var(--couleur-primaire);
+    color: var(--couleur-blanc);
+    padding: var(--espace-xl) 0 var(--espace-md);
+}
+
+.footer__conteneur {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--espace-xl);
+    max-width: var(--largeur-max);
+    margin: 0 auto;
+    padding: 0 var(--espace-md);
+}
+
+.footer__colonne {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__titre {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--couleur-blanc);
+    margin-bottom: var(--espace-md);
+    position: relative;
+    padding-bottom: var(--espace-xs);
+}
+
+.footer__titre::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--couleur-accent);
+}
+
+/* Support RTL pour le footer */
+html[dir="rtl"] .footer__titre::after {
+    left: auto;
+    right: 0;
+}
+
+.footer__texte {
+    font-size: var(--taille-petit);
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.footer__logo {
+    height: 40px;
+    width: auto;
+    margin-bottom: var(--espace-sm);
+}
+
+/* Liens du footer */
+.footer__liens {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espace-xs);
+}
+
+.footer__lien {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: var(--taille-petit);
+    padding: 4px 0;
+    transition: color var(--transition-rapide);
+}
+
+.footer__lien:hover,
+.footer__lien:focus {
+    color: var(--couleur-accent);
+}
+
+/* Contact footer */
+.footer__contact {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espace-sm);
+}
+
+.footer__contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--espace-xs);
+    font-size: var(--taille-petit);
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.footer__contact-item svg {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    fill: var(--couleur-accent);
+}
+
+.footer__contact-lien {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.footer__contact-lien:hover {
+    color: var(--couleur-accent);
+}
+
+/* Copyright */
+.footer__copyright {
+    margin-top: var(--espace-xl);
+    padding-top: var(--espace-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: var(--taille-petit);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* --------------------------------------------------------------------------
+   7. BOUTONS
+   -------------------------------------------------------------------------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--espace-xs);
+    padding: 14px 28px;
+    font-family: var(--police-principale);
+    font-size: var(--taille-bouton);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: var(--rayon-moyen);
+    cursor: pointer;
+    transition: all var(--transition-normale);
+    min-height: 44px; /* Accessibilité - zone cliquable minimum */
+}
+
+.btn--primaire {
+    background-color: var(--couleur-accent);
+    color: var(--couleur-blanc);
+    box-shadow: var(--ombre-legere);
+}
+
+.btn--primaire:hover,
+.btn--primaire:focus {
+    background-color: var(--couleur-accent-hover);
+    color: var(--couleur-blanc);
+    box-shadow: var(--ombre-moyenne);
+    transform: translateY(-2px);
+}
+
+.btn--secondaire {
+    background-color: transparent;
+    color: var(--couleur-primaire);
+    border: 2px solid var(--couleur-primaire);
+}
+
+.btn--secondaire:hover,
+.btn--secondaire:focus {
+    background-color: var(--couleur-primaire);
+    color: var(--couleur-blanc);
+}
+
+.btn--blanc {
+    background-color: var(--couleur-blanc);
+    color: var(--couleur-primaire);
+}
+
+.btn--blanc:hover,
+.btn--blanc:focus {
+    background-color: var(--couleur-gris-clair);
+    color: var(--couleur-primaire);
+}
+
+.btn--petit {
+    padding: 10px 20px;
+    font-size: var(--taille-petit);
+}
+
+.btn--grand {
+    padding: 18px 36px;
+    font-size: 1.125rem;
+}
+
+/* Icône WhatsApp dans bouton */
+.btn__icone {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* --------------------------------------------------------------------------
+   8. CARTES
+   -------------------------------------------------------------------------- */
+.carte {
+    background-color: var(--couleur-blanc);
+    border-radius: var(--rayon-grand);
+    box-shadow: var(--ombre-legere);
+    overflow: hidden;
+    transition: all var(--transition-normale);
+}
+
+.carte:hover {
+    box-shadow: var(--ombre-moyenne);
+    transform: translateY(-4px);
+}
+
+.carte__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.carte__contenu {
+    padding: var(--espace-md);
+}
+
+.carte__titre {
+    font-size: var(--taille-h3);
+    margin-bottom: var(--espace-xs);
+}
+
+.carte__texte {
+    color: var(--couleur-gris-fonce);
+    margin-bottom: var(--espace-sm);
+}
+
+.carte__liste {
+    margin-bottom: var(--espace-md);
+}
+
+.carte__liste li {
+    position: relative;
+    padding-left: var(--espace-md);
+    margin-bottom: var(--espace-xs);
+    font-size: var(--taille-petit);
+}
+
+.carte__liste li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 6px;
+    height: 6px;
+    background-color: var(--couleur-accent);
+    border-radius: var(--rayon-rond);
+}
+
+/* Support RTL pour les cartes */
+html[dir="rtl"] .carte__liste li {
+    padding-left: 0;
+    padding-right: var(--espace-md);
+}
+
+html[dir="rtl"] .carte__liste li::before {
+    left: auto;
+    right: 0;
+}
+
+/* Carte avec icône (avantages) */
+.carte--icone {
+    text-align: center;
+    padding: var(--espace-lg);
+}
+
+.carte--icone:hover {
+    border-color: var(--couleur-secondaire);
+}
+
+.carte__icone {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto var(--espace-md);
+    padding: var(--espace-sm);
+    background: linear-gradient(135deg, var(--couleur-primaire) 0%, var(--couleur-secondaire) 100%);
+    border-radius: var(--rayon-grand);
+}
+
+.carte__icone svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--couleur-blanc);
+}
+
+/* --------------------------------------------------------------------------
+   9. BOUTON RETOUR EN HAUT
+   -------------------------------------------------------------------------- */
+.btn-haut {
+    position: fixed;
+    bottom: var(--espace-md);
+    right: var(--espace-md);
+    width: 48px;
+    height: 48px;
+    background-color: var(--couleur-primaire);
+    color: var(--couleur-blanc);
+    border: none;
+    border-radius: var(--rayon-rond);
+    box-shadow: var(--ombre-moyenne);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-normale);
+    z-index: 900;
+}
+
+.btn-haut--visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn-haut:hover {
+    background-color: var(--couleur-accent);
+    transform: translateY(-4px);
+}
+
+.btn-haut svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+}
+
+/* Support RTL */
+html[dir="rtl"] .btn-haut {
+    right: auto;
+    left: var(--espace-md);
+}
+
+/* --------------------------------------------------------------------------
+   10. FIL D'ARIANE
+   -------------------------------------------------------------------------- */
+.fil-ariane {
+    padding: var(--espace-sm) 0;
+    background-color: var(--couleur-gris-clair);
+}
+
+.fil-ariane__liste {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--espace-xs);
+    font-size: var(--taille-petit);
+}
+
+.fil-ariane__item {
+    display: flex;
+    align-items: center;
+    gap: var(--espace-xs);
+}
+
+.fil-ariane__item:not(:last-child)::after {
+    content: '/';
+    color: var(--couleur-gris-moyen);
+}
+
+.fil-ariane__lien {
+    color: var(--couleur-gris-fonce);
+}
+
+.fil-ariane__lien:hover {
+    color: var(--couleur-accent);
+}
+
+.fil-ariane__actuel {
+    color: var(--couleur-primaire);
+    font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   11. UTILITAIRES
+   -------------------------------------------------------------------------- */
+/* Espacement principal pour le header fixe */
+.main {
+    padding-top: var(--hauteur-header);
+}
+
+/* Texte */
+.texte-centre {
+    text-align: center;
+}
+
+.texte-gauche {
+    text-align: left;
+}
+
+.texte-droite {
+    text-align: right;
+}
+
+/* Marges */
+.mb-0 { margin-bottom: 0; }
+.mb-sm { margin-bottom: var(--espace-sm); }
+.mb-md { margin-bottom: var(--espace-md); }
+.mb-lg { margin-bottom: var(--espace-lg); }
+.mb-xl { margin-bottom: var(--espace-xl); }
+
+/* Grilles */
+.grille {
+    display: grid;
+    gap: var(--espace-lg);
+}
+
+.grille--2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grille--3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grille--4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Masquage accessible */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Flexbox utilitaires */
+.flex {
+    display: flex;
+}
+
+.flex--centre {
+    align-items: center;
+    justify-content: center;
+}
+
+.flex--entre {
+    justify-content: space-between;
+}
+
+.flex--colonne {
+    flex-direction: column;
+}
