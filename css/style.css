@@ -228,20 +228,24 @@ img {
 /* Logo */
 .header__logo {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 0.25rem;
     flex-shrink: 0;
 }
 
-.header__logo img {
+.header__logo-image {
     height: 50px;
-    width: auto;
+    width: 50px;
+    object-fit: contain;
 }
 
 .header__logo-texte {
-    font-size: 1.25rem;
+    font-size: 0.875rem;
     font-weight: 700;
     color: var(--couleur-primaire);
     letter-spacing: -0.5px;
+    white-space: nowrap;
 }
 
 /* Navigation principale */
