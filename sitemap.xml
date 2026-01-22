@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+    <!-- Page d'accueil -->
+    <url>
+        <loc>https://klengenwere.com/</loc>
+        <lastmod>2026-01-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://klengenwere.com/?lang=fr"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://klengenwere.com/?lang=en"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://klengenwere.com/?lang=ar"/>
+    </url>
+
+    <!-- Page Services -->
+    <url>
+        <loc>https://klengenwere.com/services.html</loc>
+        <lastmod>2026-01-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://klengenwere.com/services.html?lang=fr"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://klengenwere.com/services.html?lang=en"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://klengenwere.com/services.html?lang=ar"/>
+    </url>
+
+    <!-- Page Contact -->
+    <url>
+        <loc>https://klengenwere.com/contact.html</loc>
+        <lastmod>2026-01-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://klengenwere.com/contact.html?lang=fr"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://klengenwere.com/contact.html?lang=en"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://klengenwere.com/contact.html?lang=ar"/>
+    </url>
+
+</urlset>

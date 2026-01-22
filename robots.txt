@@ -1,0 +1,15 @@
+# Robots.txt pour KLENGEN-WERE
+# Site: https://klengenwere.com
+
+User-agent: *
+Allow: /
+
+# Fichiers et dossiers à exclure
+Disallow: /node_modules/
+Disallow: /*.json
+Disallow: /*.md
+Disallow: /DEPLOIEMENT.md
+Disallow: /VERIFICATION-SSL.md
+
+# Sitemap
+Sitemap: https://klengenwere.com/sitemap.xml
