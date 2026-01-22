@@ -230,9 +230,9 @@
     // Intégration WhatsApp
     // -------------------------------------------------------------------------
     const GestionnaireWhatsApp = {
-        // Numéros WhatsApp de l'entreprise (à personnaliser)
+        // Numéros WhatsApp de l'entreprise
         numeros: [
-            '237XXXXXXXXX'  // Remplacer par le vrai numéro
+            '237690566933'  // Numéro principal WhatsApp
         ],
 
         init: function() {

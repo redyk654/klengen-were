@@ -1,0 +1,99 @@
+╔═══════════════════════════════════════════════════════════════════╗
+║           🚀 GUIDE RAPIDE DE DÉPLOIEMENT - KLENGEN-WERE           ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+📁 FICHIER À UTILISER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+→ klengen-were-production.zip (1.6 MB)
+  Contient les 22 fichiers optimisés prêts pour la production
+
+
+🎯 MÉTHODE RECOMMANDÉE : cPanel
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+ÉTAPE 1 : Connexion
+  → Aller sur https://cpanel.o2switch.fr
+  → Se connecter avec vos identifiants O2switch
+
+ÉTAPE 2 : Gestionnaire de fichiers
+  → Cliquer sur "Gestionnaire de fichiers" (File Manager)
+  → Naviguer vers /public_html/
+
+ÉTAPE 3 : Upload
+  → Cliquer sur le bouton "Upload"
+  → Glisser-déposer klengen-were-production.zip
+  → Attendre la fin de l'upload (barre de progression)
+
+ÉTAPE 4 : Extraction
+  → Retourner dans /public_html/
+  → Clic droit sur klengen-were-production.zip
+  → Choisir "Extract" ou "Extraire"
+  → Attendre l'extraction
+
+ÉTAPE 5 : Nettoyage
+  → Supprimer le fichier ZIP
+  → Vérifier que vous avez :
+    ✓ index.html
+    ✓ services.html
+    ✓ contact.html
+    ✓ .htaccess (fichier caché)
+    ✓ Dossiers : css/, js/, assets/
+
+ÉTAPE 6 : Test
+  → Ouvrir https://klengenwere.com dans votre navigateur
+  → Vérifier que tout fonctionne
+
+
+✅ CHECKLIST DE VÉRIFICATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+□ La page d'accueil s'affiche correctement
+□ Le logo et les favicons sont visibles
+□ Le menu de navigation fonctionne
+□ Le changement de langue fonctionne (FR/EN/AR)
+□ Les boutons WhatsApp fonctionnent
+□ Le menu mobile (hamburger) fonctionne
+□ Le cadenas HTTPS est affiché (sécurisé)
+□ Aucune erreur dans la console navigateur (F12)
+
+
+⚠️  EN CAS DE PROBLÈME
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Problème : Le site n'affiche rien
+Solution : Vérifier que les fichiers sont bien dans /public_html/
+          et non dans un sous-dossier
+
+Problème : Les images ne s'affichent pas
+Solution : Vérifier que le dossier assets/ a bien été uploadé
+          Vérifier les permissions (755 pour dossiers)
+
+Problème : Le SSL ne fonctionne pas
+Solution : Attendre 15-30 minutes après le déploiement
+          Contacter O2switch si le problème persiste
+
+
+📞 SUPPORT O2SWITCH
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Email    : support@o2switch.fr
+Téléphone: +33 4 44 44 60 40
+FAQ      : https://faq.o2switch.fr/
+
+
+📖 DOCUMENTATION COMPLÈTE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Voir le fichier DEPLOIEMENT.md pour :
+  • Instructions FTP détaillées
+  • Configuration avancée
+  • Optimisations supplémentaires
+  • Dépannage complet
+
+
+🎉 BONNE CHANCE AVEC LE DÉPLOIEMENT !
+
+Temps estimé : 10-15 minutes
+Difficulté   : Facile
+
