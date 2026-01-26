@@ -254,6 +254,7 @@ html[dir="rtl"] .fil-ariane__separateur {
     border: 3px solid var(--couleur-accent);
     border-radius: var(--rayon-grand);
     z-index: -1;
+    pointer-events: none;
 }
 
 /* RTL support */
@@ -586,6 +587,8 @@ html[dir="rtl"] .contact-whatsapp__numero:hover {
     height: 400px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: var(--rayon-rond);
+    pointer-events: none;
+    z-index: 0;
 }
 
 .cta-final::after {
@@ -597,6 +600,13 @@ html[dir="rtl"] .contact-whatsapp__numero:hover {
     height: 300px;
     background: rgba(255, 255, 255, 0.03);
     border-radius: var(--rayon-rond);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.cta-final .conteneur {
+    position: relative;
+    z-index: 1;
 }
 
 .cta-final__texte {
